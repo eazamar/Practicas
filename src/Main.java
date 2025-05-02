@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.RandomAccess;
 import java.util.Scanner;
-
+//Curso Introducción Java
 public class Main {
     public static void main(String[] args) {
 
@@ -87,6 +87,81 @@ public class Main {
         Operador Condicional Ternario: ? :
         Operadores de Bits: &, |, ^, ~, <<, >>, >>>
          */
+
+        //Sentencias de desición
+        //if-else if- else
+        int edad = 20;
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad.");
+        }else if(edad < 18){
+            System.out.println("Eres menor de edad.");
+        }else{
+            System.out.println("Ingresaste un dato diferente a la edad");
+        }
+
+        //Operador ternario
+        var numero = 5;
+        var resultado = (numero % 2 == 0) ? "Par" : "Impar";
+        var numero_2 = -5;
+        resultado = (numero > 0) ? "Positivo" : (numero < 0) ? "Negativo" : "Cero";
+
+        //switch
+        int dia = 5;
+        switch (dia) {
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("Día inválido");
+                break;
+        }
+
+        int dia_2 = 3;
+        String nombreDia;
+        nombreDia = switch (dia_2) {
+            case 1 -> "Lunes";
+            case 2 -> "Martes";
+            case 3 -> "Miércoles";
+            case 4 -> "Jueves";
+            case 5 -> "Viernes";
+            case 6, 7-> "Fin de semana";
+            default -> {
+                yield "Día inválido"; // Devolver un valor con yield
+            }
+        };
+        System.out.println(nombreDia);
+
+        //Ciclos
+        int i = 1;
+        while (i <= 10) {
+            System.out.println(i);
+            i++;
+        }
+
+        int o = 1;
+        do {
+            System.out.println(i);
+            i++;
+        } while (o>0);
+
 
     }
 }
