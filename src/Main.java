@@ -156,12 +156,52 @@ public class Main {
             i++;
         }
 
-        int o = 1;
+        int o = 10;
         do {
-            System.out.println(i);
-            i++;
+            System.out.println(o--);
         } while (o>0);
 
+        for (int x = 1; x <= 5; x++) {
+            System.out.println("i = " + x);
+        }
 
+        // Ejemplo break, imprimir solo el primer numero par
+        System.out.println("Palabra break: ");
+        for(var numero_x = 1; numero_x < 10; numero_x++){
+            if(numero_x % 2 == 0){
+                System.out.print(numero_x + " ");
+                break;
+            }
+        }
+
+        // Ejemplo con continua. Imprimir solo numeros pares, ignorar impares
+        System.out.println("\nPalabra continue: ");
+        for(var numero_y = 1; numero_y < 10; numero_y++){
+            if(numero_y % 2 == 1){ // numero impar
+                continue; //saltamos a la siguiente iteracion
+            }
+            System.out.print(numero_y + " "); // numeros pares
+        }
+
+        //Matrices
+        int[][] matrizX = new int[2][3];
+        matrizX[0][0] = 200;
+        matrizX[0][1] = 100;
+        int[][] matrizY = new int[][]{
+                {100,200,300},
+                {200,400,500}};
+
+        //Métodos o funciones
+        saludarJava("Se ejecuta función");
+        FuncionSumar(10, 5);
+    }
+
+    private static void saludarJava(String mensaje){
+        System.out.printf("Mensaje: " + mensaje);
+    }
+
+    private static int FuncionSumar(int a, int b){
+        var resultado = a + b;
+        return resultado;
     }
 }
