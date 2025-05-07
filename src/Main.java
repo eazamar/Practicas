@@ -106,7 +106,7 @@ public class Main {
         resultado = (numero > 0) ? "Positivo" : (numero < 0) ? "Negativo" : "Cero";
 
         //switch
-        int dia = 5;
+        int dia = 10;
         switch (dia) {
             case 1:
                 System.out.println("Lunes");
