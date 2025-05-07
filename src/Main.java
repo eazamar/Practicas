@@ -89,14 +89,17 @@ public class Main {
          */
 
         //Sentencias de desición
-        //if-else if- else
-        int edad = 20;
-        if (edad >= 18) {
-            System.out.println("Eres mayor de edad.");
+        //if-else if- else18
+        int edad = 2;
+        if (edad !=18 || edad < 65 ) {
+            System.out.println("Eres un adulto joven.");
         }else if(edad < 18){
             System.out.println("Eres menor de edad.");
+
+        } else if(edad <3){
+            System.out.println("Eres bebé.");
         }else{
-            System.out.println("Ingresaste un dato diferente a la edad");
+            System.out.println("Eres un adulto mayor");
         }
 
         //Operador ternario
@@ -161,8 +164,11 @@ public class Main {
             System.out.println(o--);
         } while (o>0);
 
-        for (int x = 1; x <= 5; x++) {
-            System.out.println("i = " + x);
+        for (int x = 1; x <= 5;  x++) {
+            for(int y = 1; y<= 5; y++){
+                System.out.println("i = " + (y));
+            }
+            System.out.println("i = " + (x));
         }
 
         // Ejemplo break, imprimir solo el primer numero par
@@ -184,7 +190,7 @@ public class Main {
         }
 
         //Matrices
-        int[][] matrizX = new int[2][3];
+        int[][] matrizX = new int[5][7];
         matrizX[0][0] = 200;
         matrizX[0][1] = 100;
         int[][] matrizY = new int[][]{
