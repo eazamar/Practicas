@@ -201,14 +201,25 @@ public class Main {
         //Métodos o funciones
         saludarJava("Se ejecuta función");
         FuncionSumar(10, 5);
+
+
+   // Ejercicio 1: pedir por consola el número de filas para pintar un triangulo con astericos
+        int numeroFilas = 5;
+        for(var fila = 1; fila <= numeroFilas; fila++){
+            var espaciosBlanco = "_".repeat(numeroFilas - fila);
+            var asteriscos = "*".repeat(2 * fila - 1);
+            System.out.println(espaciosBlanco + asteriscos);
+        }
     }
 
     private static void saludarJava(String mensaje){
         System.out.printf("Mensaje: " + mensaje);
     }
 
-    private static int FuncionSumar(int a, int b){
-        var resultado = a + b;
+    private static double FuncionSumar(float a, int b){
+        double resultado = a + b;
         return resultado;
     }
+
+
 }
